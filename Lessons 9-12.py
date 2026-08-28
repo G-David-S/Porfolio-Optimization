@@ -35,12 +35,13 @@ class Stock:
     
     def is_profitable(self, purchuse_price):
         return self.price > purchuse_price
-        
 
 aapl = Stock("AAPL", 150.50, 10)
 msft = Stock("MSFT", 310.21, 6)
+redr = Stock("REDR", 185.1 ,10)
+anime = Stock("ANIME", 82, 18)
 
-portfolio = [aapl, msft]
+portfolio = [aapl, msft, redr, anime]
 
 for stock in portfolio:
     value = stock.total_value()
