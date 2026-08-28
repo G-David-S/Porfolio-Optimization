@@ -139,3 +139,10 @@ try:
     print(portfolio["NFLX"])
 except KeyError:
     print("No data found for", "NFLX")  
+
+#
+#
+#
+#
+#
+#
