@@ -71,3 +71,18 @@ for stock in portfolio:
 
 # msft = Stock(...) — a second, completely independent object. aapl and msft each hold their own separate ticker/price/shares —
 # No need to pass self manually here either — Python knows "self" is stock because that's what you called the method on
+
+
+
+# LESSON 12 imported YFINANCE
+# import yfinance as yf — as creates an alias. yfinance is the module's real name, but typing it out every time is annoying, 
+# so as yf lets you refer to it as yf for the rest of the file.
+
+import yfinance as yf
+
+tickers = ["AAPL", "MSFT", "TSLA"]
+
+for symbol in tickers:
+    stock = yf.Ticker(symbol)
+    info = stock.info
+    print(f"{symbol}: {info['longName']} - ${info['currentPrice']}")
